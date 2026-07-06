@@ -14,6 +14,19 @@ The final output is a unified master table (`nba_master_all`) that serves as the
 4. Merge all seasons into one master table.
 5. Perform exploratory data analysis (EDA).
 
+   
+## Technologies Used
+
+- MySQL
+- SQL Window Functions
+- Subqueries
+- Joins
+- Aggregate Functions
+- Groupby
+- Case statements
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+
 ## Exploratory Data Analysis
 
 The SQL EDA focused on four major areas:
@@ -42,22 +55,8 @@ This query identified the top young scorers in each NBA season using a ranking f
 
 <img width="352" height="146" alt="image" src="https://github.com/user-attachments/assets/253b9903-f81e-4836-9234-529d9df04053" />
 
-Most players age 24 and under had between one and three seasons of NBA experience. This distribution supports focusing the machine learning model on early-career development, where breakout seasons are most likely to occur.
+Most players age 24 and under had between one and three seasons of NBA experience in the dataset chosen. This distribution supports focusing the machine learning model on early-career development, where breakout seasons are most likely to occur.
 
-
-
-
-
-## Technologies Used
-
-- MySQL
-- SQL Window Functions
-- Subqueries
-- Joins
-- Groupby
-- Case statements
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
 
 ## Files
 
