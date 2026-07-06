@@ -41,6 +41,7 @@ This query identified the top young scorers in each NBA season using a ranking f
 ### Experience Distribution
 
 <img width="352" height="146" alt="image" src="https://github.com/user-attachments/assets/253b9903-f81e-4836-9234-529d9df04053" />
+
 Most players age 24 and under had between one and three seasons of NBA experience. This distribution supports focusing the machine learning model on early-career development, where breakout seasons are most likely to occur.
 
 
