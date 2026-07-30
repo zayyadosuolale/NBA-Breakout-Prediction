@@ -20,4 +20,4 @@ Datasets cleaned using Python prior to being imported into MySQL.
 - Sports Reference LLC. 2022–23 NBA Player Stats: Advanced. Basketball-Reference.com. Accessed June 24, 2026.
 - Sports Reference LLC. 2023–24 NBA Player Stats: Advanced. Basketball-Reference.com. Accessed June 24, 2026.
 - Sports Reference LLC. 2024–25 NBA Player Stats: Advanced. Basketball-Reference.com. Accessed June 24, 2026.
-- Sports Reference LLC. 2025–26 NBA Player Stats: Advanced. Basketball-Reference.com. Accessed July 29, 2026.
+- Sports Reference LLC. 2025–26 NBA Player Stats: Advanced. Basketball-Reference.com. Accessed July 28, 2026.
