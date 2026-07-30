@@ -14,6 +14,8 @@ Tasks include:
 - Convert numeric columns
 - Export cleaned CSV files
 
+## Data_Analysis
+- Used Python to create Histograms and things like that
 ## Machine_Learning
 
 This folder will contain the Python scripts used to build and evaluate the predictive model.
