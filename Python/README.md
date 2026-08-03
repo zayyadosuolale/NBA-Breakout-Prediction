@@ -15,7 +15,7 @@ Tasks include:
 - Export cleaned CSV files
 
 ## Data_Analysis
-- Used Python to create Histograms and things like that
+- Used Python to create Histograms, Box plots, and Scatter plots
 ## Machine_Learning
 
 This folder will contain the Python scripts used to build and evaluate the predictive model.
@@ -29,3 +29,4 @@ Workflow:
 - Train machine learning models
 - Evaluate model performance
 - Analyze feature importance
+- Compared prediction of 25-26 season to finished 25 - 26 stats
