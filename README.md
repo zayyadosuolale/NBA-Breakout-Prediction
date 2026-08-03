@@ -13,3 +13,28 @@ Multiple classification models were trained and evaluated using historical playe
 NBA organizations, analysts, and fans often attempt to identify players who are poised for a breakout season before it occurs. While many evaluations focus on a player's current statistics, predicting future improvement is considerably more challenging because player development is influenced by multiple factors, including increased opportunity, efficiency, usage, and overall impact. The objective of this project was to develop a machine learning pipeline capable of identifying players with the greatest likelihood of experiencing a breakout season using only information available prior to that season. To accomplish this, historical NBA player statistics were transformed into predictive features representing year-over-year improvement rather than raw performance alone.
 
 A custom Breakout Score was developed to quantify player improvement across multiple dimensions of performance. This score was then used to create a binary classification problem, allowing supervised machine learning models to predict whether an eligible player would break out during the following NBA season. The final objective was not only to generate preseason predictions, but also to evaluate how well those predictions generalized by comparing them with the completed 2025–26 NBA season.
+
+## Dataset 
+
+The dataset was constructed using publicly available NBA player statistics obtained from Basketball Reference. Both traditional and advanced player statistics were collected for six NBA seasons (2020–21 through 2025–26) and integrated into a MySQL relational database through a series of SQL data cleaning and transformation scripts.
+
+To focus the analysis on realistic breakout candidates, only rotational players meeting the following eligibility criteria were included:
+
+Criterion	Requirement
+Age	24 years or younger
+Games Played	≥ 20 games
+Minutes Played	≥ 12 minutes per game
+
+The final dataset contained player-season observations with both traditional and advanced performance metrics, including:
+
+Points Per Game (PPG)
+Rebounds Per Game (RPG)
+Assists Per Game (APG)
+Player Efficiency Rating (PER)
+Usage Percentage (USG%)
+True Shooting Percentage (TS%)
+Box Plus/Minus (BPM)
+Win Shares (WS)
+Value Over Replacement Player (VORP)
+
+The cleaned datasets from each season were merged into a single master database, providing the foundation for exploratory data analysis, feature engineering, predictive modeling, and final model validation.
