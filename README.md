@@ -21,20 +21,20 @@ The dataset was constructed using publicly available NBA player statistics obtai
 To focus the analysis on realistic breakout candidates, only rotational players meeting the following eligibility criteria were included:
 
 Criterion	Requirement
--Age	24 years or younger
--Games Played	≥ 20 games
--Minutes Played	≥ 12 minutes per game
+- Age	24 years or younger
+- Games Played	≥ 20 games
+- Minutes Played	≥ 12 minutes per game
 
 The final dataset contained player-season observations with both traditional and advanced performance metrics, including:
 
-Points Per Game (PPG)
-Rebounds Per Game (RPG)
-Assists Per Game (APG)
-Player Efficiency Rating (PER)
-Usage Percentage (USG%)
-True Shooting Percentage (TS%)
-Box Plus/Minus (BPM)
-Win Shares (WS)
-Value Over Replacement Player (VORP)
+- Points Per Game (PPG)
+- Rebounds Per Game (RPG)
+- Assists Per Game (APG)
+- Player Efficiency Rating (PER)
+- Usage Percentage (USG%)
+- True Shooting Percentage (TS%)
+- Box Plus/Minus (BPM)
+- Win Shares (WS)
+- Value Over Replacement Player (VORP)
 
 The cleaned datasets from each season were merged into a single master database, providing the foundation for exploratory data analysis, feature engineering, predictive modeling, and final model validation.
