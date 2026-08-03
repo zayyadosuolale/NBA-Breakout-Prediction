@@ -21,9 +21,9 @@ The dataset was constructed using publicly available NBA player statistics obtai
 To focus the analysis on realistic breakout candidates, only rotational players meeting the following eligibility criteria were included:
 
 Criterion	Requirement
-Age	24 years or younger
-Games Played	≥ 20 games
-Minutes Played	≥ 12 minutes per game
+-Age	24 years or younger
+-Games Played	≥ 20 games
+-Minutes Played	≥ 12 minutes per game
 
 The final dataset contained player-season observations with both traditional and advanced performance metrics, including:
 
