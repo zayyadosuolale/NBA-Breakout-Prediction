@@ -128,6 +128,16 @@ Following model development, the trained Logistic Regression model generated bre
 
 Actual breakout labels were reconstructed by applying the same feature engineering methodology used during model development. Year-over-year delta features were recalculated, standardized using z-score normalization, and combined into the custom Breakout Score. Players whose Breakout Scores ranked within the top 20% of eligible players were classified as actual breakout players.
 
-The preseason predictions were then merged with the completed 2025–26 player data to evaluate how well the model generalized to unseen observations. Performance was assessed using standard classification metrics, including Accuracy, Precision, Recall, F1 Score, and ROC-AUC, while also examining the model's ability to rank players according to breakout probability.
+The preseason predictions were then merged with the completed 2025–26 player data to evaluate how well the model generalized to unseen observations. Performance was assessed using standard classification metrics, including Accuracy, Precision, Recall, F1 Score, and ROC-AUC, while also examining the model's ability to rank players according to breakout probability. Unlike many predictive modeling projects that conclude after model training, this final validation stage provided an out-of-sample assessment of the model's real-world performance and demonstrated the complete machine learning workflow from historical data collection to post-season evaluation.
 
-Unlike many predictive modeling projects that conclude after model training, this final validation stage provided an out-of-sample assessment of the model's real-world performance and demonstrated the complete machine learning workflow from historical data collection to post-season evaluation.
+## Results
+
+| Metric             |            Final Model |
+| ------------------ | ---------------------: |
+| Final Model        |    Logistic Regression |
+| Cross Validation   |      5-Fold Stratified |
+| ROC-AUC            |              **0.696** |
+| Recall             |              **57.1%** |
+| Top 20 Predictions | **4 Actual Breakouts** |
+
+The Logistic Regression model demonstrated moderate predictive performance when evaluated on the completed 2025–26 season. While binary classification performance remained challenging due to class imbalance and the inherent uncertainty of player development, the model showed stronger performance as a ranking tool by identifying 4 actual breakout players among its top 20 preseason predictions. These findings suggest that historical improvement trends contain meaningful information about future player development, while also highlighting the difficulty of predicting breakout seasons using performance statistics alone. External factors such as injuries, coaching decisions, trades, and changes in player role remain important influences that were beyond the scope of the current dataset.
