@@ -65,5 +65,44 @@ flowchart TD
     G --> H[2025-26 Predictions]
     H --> I[Out-of-Sample Validation]
 ```
+## Exploratory Data Analysis
 
+Exploratory Data Analysis (EDA) was performed to better understand the characteristics of the player-season dataset before feature engineering and model development. Histograms, boxplots, scatterplots, and correlation matrices were used to examine variable distributions, identify potential outliers, and evaluate relationships among traditional and advanced player statistics. These analyses guided feature selection and helped reduce redundant information within the predictive models.
+
+Several important patterns emerged during the analysis:
+
+Usage Percentage (USG%) and Points Per Game (PPG) exhibited a strong positive relationship, indicating that players with greater offensive involvement generally scored more points.
+Advanced performance metrics including Player Efficiency Rating (PER), Box Plus/Minus (BPM), Win Shares (WS), and Value Over Replacement Player (VORP) were highly correlated, suggesting that these statistics measured similar aspects of overall player value.
+Age demonstrated only weak relationships with the remaining performance metrics, indicating that within the selected age range (24 years and younger), age alone was not a strong predictor of player performance.
+Most performance metrics displayed right-skewed distributions, reflecting that elite player performances are relatively uncommon compared with the majority of rotational NBA players.
+
+The correlation analysis played an important role in the subsequent feature engineering stage by identifying highly related variables that could introduce redundancy into the predictive models. These findings helped guide the selection of improvement metrics used to construct the custom Breakout Score.
+
+## Feauture Engineering
+
+Feature engineering served as the foundation of the predictive modeling pipeline by transforming historical player statistics into features that better captured player development over time. Rather than relying solely on raw season statistics, the project emphasized year-over-year improvement, operating under the hypothesis that changes in player performance are more predictive of future breakouts than absolute performance alone.
+
+To measure player development, year-over-year delta features were calculated for each eligible player by comparing consecutive NBA seasons. These features quantified changes in both traditional and advanced performance metrics, including:
+
+Points Per Game (PPG)
+Rebounds Per Game (RPG)
+Assists Per Game (APG)
+Player Efficiency Rating (PER)
+Usage Percentage (USG%)
+True Shooting Percentage (TS%)
+Box Plus/Minus (BPM)
+Win Shares (WS)
+Value Over Replacement Player (VORP)
+
+To ensure fair comparisons across metrics with different scales, selected improvement variables were standardized using z-score normalization. Standardization allowed each metric to contribute equally to the overall evaluation of player improvement regardless of its original units or range.
+
+Five standardized improvement metrics were then combined to construct a custom Breakout Score:
+
+Δ Points Per Game
+Δ Player Efficiency Rating (PER)
+Δ Usage Percentage (USG%)
+Δ True Shooting Percentage (TS%)
+Δ Win Shares (WS)
+
+The Breakout Score represents the average standardized improvement across these five metrics. Within each NBA season, players whose Breakout Scores ranked in the top 20% of all eligible players were labeled as breakout players. This binary label became the target variable for the supervised machine learning models. To predict future player development without introducing target leakage, the breakout label was shifted forward by one season. As a result, player statistics from one season were used to predict whether that player would achieve breakout status during the following NBA season.
 
