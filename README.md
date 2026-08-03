@@ -84,25 +84,24 @@ Feature engineering served as the foundation of the predictive modeling pipeline
 
 To measure player development, year-over-year delta features were calculated for each eligible player by comparing consecutive NBA seasons. These features quantified changes in both traditional and advanced performance metrics, including:
 
-Points Per Game (PPG)
-Rebounds Per Game (RPG)
-Assists Per Game (APG)
-Player Efficiency Rating (PER)
-Usage Percentage (USG%)
-True Shooting Percentage (TS%)
-Box Plus/Minus (BPM)
-Win Shares (WS)
-Value Over Replacement Player (VORP)
+- Points Per Game (PPG)
+- Rebounds Per Game (RPG)
+- Assists Per Game (APG)
+- Player Efficiency Rating (PER)
+- Usage Percentage (USG%)
+- True Shooting Percentage (TS%)
+- Box Plus/Minus (BPM)
+- Win Shares (WS)
+- Value Over Replacement Player (VORP)
 
 To ensure fair comparisons across metrics with different scales, selected improvement variables were standardized using z-score normalization. Standardization allowed each metric to contribute equally to the overall evaluation of player improvement regardless of its original units or range.
 
 Five standardized improvement metrics were then combined to construct a custom Breakout Score:
-
-Δ Points Per Game
-Δ Player Efficiency Rating (PER)
-Δ Usage Percentage (USG%)
-Δ True Shooting Percentage (TS%)
-Δ Win Shares (WS)
+- Δ Points Per Game
+- Δ Player Efficiency Rating (PER)
+- Δ Usage Percentage (USG%)
+- Δ True Shooting Percentage (TS%)
+- Δ Win Shares (WS)
 
 The Breakout Score represents the average standardized improvement across these five metrics. Within each NBA season, players whose Breakout Scores ranked in the top 20% of all eligible players were labeled as breakout players. This binary label became the target variable for the supervised machine learning models. To predict future player development without introducing target leakage, the breakout label was shifted forward by one season. As a result, player statistics from one season were used to predict whether that player would achieve breakout status during the following NBA season.
 
