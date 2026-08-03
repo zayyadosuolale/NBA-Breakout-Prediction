@@ -83,7 +83,6 @@ The correlation analysis played an important role in the subsequent feature engi
 Feature engineering served as the foundation of the predictive modeling pipeline by transforming historical player statistics into features that better captured player development over time. Rather than relying solely on raw season statistics, the project emphasized year-over-year improvement, operating under the hypothesis that changes in player performance are more predictive of future breakouts than absolute performance alone.
 
 To measure player development, year-over-year delta features were calculated for each eligible player by comparing consecutive NBA seasons. These features quantified changes in both traditional and advanced performance metrics, including:
-
 - Points Per Game (PPG)
 - Rebounds Per Game (RPG)
 - Assists Per Game (APG)
