@@ -8,6 +8,22 @@ This project develops an end-to-end data analytics and machine learning pipeline
 
 Multiple classification models were trained and evaluated using historical player data. The final model was then validated against the completed 2025–26 NBA season by comparing preseason predictions with actual player outcomes, providing an out-of-sample assessment of the model's predictive performance.
 
+## Technologies Used
+
+| Category                    | Technologies                         |
+| --------------------------- | ------------------------------------ |
+| **Programming Languages**   | Python, SQL                          |
+| **Database Management**     | MySQL                                |
+| **Data Analysis**           | Pandas, NumPy                        |
+| **Machine Learning**        | Scikit-learn                         |
+| **Data Visualization**      | Matplotlib, Seaborn                  |
+| **Database Connectivity**   | SQLAlchemy, PyMySQL                  |
+| **Environment Management**  | python-dotenv                        |
+| **Development Environment** | Visual Studio Code, Jupyter Notebook |
+| **Version Control**         | Git, GitHub                          |
+| **Data Source**             | Basketball Reference                 |
+
+
 ## Problem Statement
 
 NBA organizations, analysts, and fans often attempt to identify players who are poised for a breakout season before it occurs. While many evaluations focus on a player's current statistics, predicting future improvement is considerably more challenging because player development is influenced by multiple factors, including increased opportunity, efficiency, usage, and overall impact. The objective of this project was to develop a machine learning pipeline capable of identifying players with the greatest likelihood of experiencing a breakout season using only information available prior to that season. To accomplish this, historical NBA player statistics were transformed into predictive features representing year-over-year improvement rather than raw performance alone.
