@@ -38,3 +38,30 @@ The final dataset contained player-season observations with both traditional and
 - Value Over Replacement Player (VORP)
 
 The cleaned datasets from each season were merged into a single master database, providing the foundation for exploratory data analysis, feature engineering, predictive modeling, and final model validation.
+
+## Methodology
+
+The project followed a structured end-to-end analytics workflow beginning with data acquisition and ending with out-of-sample model validation. SQL was used to clean, integrate, analyze and organize historical NBA player statistics into a relational database, while Python was used also for exploratory data analysis, and later feature engineering, predictive modeling, and performance evaluation.
+
+Rather than relying exclusively on raw player statistics, the project emphasized changes in player performance over time. Historical player data were transformed into year-over-year improvement metrics, allowing the models to learn patterns associated with future player development instead of simply identifying already established stars.
+
+The overall workflow consisted of four major stages:
+
+Exploratory Data Analysis – Examined player distributions, identified outliers, and evaluated relationships among traditional and advanced statistics.
+Feature Engineering – Created year-over-year delta features, standardized improvement metrics, and developed a custom Breakout Score used to define breakout seasons.
+Predictive Modeling – Trained and compared Logistic Regression and Random Forest classifiers using stratified train-test splits, cross-validation, and hyperparameter tuning.
+Model Validation – Compared preseason predictions against the completed 2025–26 NBA season to evaluate the model's ability to generalize to unseen data.
+
+## Project Workflow
+
+```mermaid
+flowchart TD
+    A[Basketball-Reference] --> B[SQL Data Cleaning]
+    B --> C[Master NBA Database]
+    C --> D[Exploratory Data Analysis with Python and SQL]
+    D --> E[Feature Engineering]
+    E --> F[Machine Learning Models]
+    F --> G[Cross Validation & Hyperparameter Tuning]
+    G --> H[2025-26 Predictions]
+    H --> I[Out-of-Sample Validation]
+```
