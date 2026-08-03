@@ -158,8 +158,12 @@ The preseason predictions were then merged with the completed 2025–26 player d
 
 The Logistic Regression model demonstrated moderate predictive performance when evaluated on the completed 2025–26 season. While binary classification performance remained challenging due to class imbalance and the inherent uncertainty of player development, the model showed stronger performance as a ranking tool by identifying 4 actual breakout players among its top 20 preseason predictions. These findings suggest that historical improvement trends contain meaningful information about future player development, while also highlighting the difficulty of predicting breakout seasons using performance statistics alone. External factors such as injuries, coaching decisions, trades, and changes in player role remain important influences that were beyond the scope of the current dataset.
 
-## Key Takeaways
+## Environment Variables
 
+This project uses a `.env` file to securely store MySQL database credentials. 
+Create a `.env` file in the project root using the `.env.example` template and update it with your own database credentials before running the Python scripts.
+
+## Key Takeaways
 - Developed an end-to-end analytics pipeline integrating SQL, Python, feature engineering, and machine learning.
 - Designed a custom Breakout Score using standardized year-over-year player improvement metrics.
 - Compared Logistic Regression and Random Forest models using stratified cross-validation and hyperparameter tuning.
