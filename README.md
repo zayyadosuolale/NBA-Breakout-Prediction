@@ -104,3 +104,30 @@ Five standardized improvement metrics were then combined to construct a custom B
 
 The Breakout Score represents the average standardized improvement across these five metrics. Within each NBA season, players whose Breakout Scores ranked in the top 20% of all eligible players were labeled as breakout players. This binary label became the target variable for the supervised machine learning models. To predict future player development without introducing target leakage, the breakout label was shifted forward by one season. As a result, player statistics from one season were used to predict whether that player would achieve breakout status during the following NBA season.
 
+## Predictive Modeling
+
+The engineered dataset was used to train supervised machine learning models capable of predicting whether an eligible NBA player would experience a breakout season during the following year. Each observation consisted of player performance statistics from the current season, while the target variable represented the player's breakout status in the subsequent season.
+
+To establish a baseline and compare modeling approaches, two classification algorithms were evaluated:
+
+Logistic Regression – Selected as an interpretable baseline model capable of estimating the probability that a player would experience a breakout season. The resulting feature coefficients also provided insight into which variables contributed most strongly to the model's predictions.
+Random Forest Classifier – Selected to capture potential nonlinear relationships and interactions among player performance metrics that may not be represented by a linear model.
+
+To reduce the effects of class imbalance and improve the reliability of model evaluation, the following workflow was implemented:
+
+- Stratified train-test split
+- Five-fold stratified cross-validation
+- Hyperparameter tuning using GridSearchCV
+- Evaluation using multiple performance metrics, including Accuracy, Precision, Recall, F1 Score, and ROC-AUC
+
+Following model comparison, Logistic Regression was selected as the final model after demonstrating stronger and more consistent performance during cross-validation. The final model was then trained using the complete historical dataset before generating breakout probabilities for the 2025–26 NBA season.
+
+## Model Validation
+
+Following model development, the trained Logistic Regression model generated breakout probabilities for eligible players entering the 2025–26 NBA season. Rather than concluding the project with these preseason predictions, the model was evaluated after the completion of the 2025–26 season using newly available player performance data.
+
+Actual breakout labels were reconstructed by applying the same feature engineering methodology used during model development. Year-over-year delta features were recalculated, standardized using z-score normalization, and combined into the custom Breakout Score. Players whose Breakout Scores ranked within the top 20% of eligible players were classified as actual breakout players.
+
+The preseason predictions were then merged with the completed 2025–26 player data to evaluate how well the model generalized to unseen observations. Performance was assessed using standard classification metrics, including Accuracy, Precision, Recall, F1 Score, and ROC-AUC, while also examining the model's ability to rank players according to breakout probability.
+
+Unlike many predictive modeling projects that conclude after model training, this final validation stage provided an out-of-sample assessment of the model's real-world performance and demonstrated the complete machine learning workflow from historical data collection to post-season evaluation.
