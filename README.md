@@ -1,5 +1,6 @@
-//NBA Breakout Prediction
-Project Overview
+# NBA Breakout Prediction
+
+## Project Overview
 
 Can an NBA player's breakout season be predicted before it happens?
 
