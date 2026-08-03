@@ -157,3 +157,20 @@ The preseason predictions were then merged with the completed 2025–26 player d
 | Top 20 Predictions | **4 Actual Breakouts** |
 
 The Logistic Regression model demonstrated moderate predictive performance when evaluated on the completed 2025–26 season. While binary classification performance remained challenging due to class imbalance and the inherent uncertainty of player development, the model showed stronger performance as a ranking tool by identifying 4 actual breakout players among its top 20 preseason predictions. These findings suggest that historical improvement trends contain meaningful information about future player development, while also highlighting the difficulty of predicting breakout seasons using performance statistics alone. External factors such as injuries, coaching decisions, trades, and changes in player role remain important influences that were beyond the scope of the current dataset.
+
+## Key Takeaways
+
+- Developed an end-to-end analytics pipeline integrating SQL, Python, feature engineering, and machine learning.
+- Designed a custom Breakout Score using standardized year-over-year player improvement metrics.
+- Compared Logistic Regression and Random Forest models using stratified cross-validation and hyperparameter tuning.
+- Validated preseason predictions against the completed 2025–26 NBA season using an out-of-sample evaluation framework.
+- Demonstrated both the potential and limitations of using historical player performance to predict future NBA breakout seasons.
+
+## Future Improvements
+Although the project demonstrates a complete end-to-end machine learning pipeline, several opportunities exist to improve predictive performance:
+- Incorporate team-level variables such as offensive pace, coaching changes, and roster composition.
+- Include injury history and player availability to better capture external influences on player development.
+- Explore additional machine learning algorithms such as XGBoost and LightGBM.
+- Investigate regression-based approaches to predict continuous Breakout Scores rather than binary breakout classifications.
+- Expand the dataset to include additional NBA seasons, increasing the number of historical player observations available for training.
+- Evaluate calibration techniques and alternative probability thresholds to improve classification performance on imbalanced datasets
